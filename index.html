@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Mobile</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo">
+                    <img src="./images/logo.jpg">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">cart</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="./images/mobile.jpg" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="./images/camera.jpg">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle Lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="./images/processor2.jpg">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon Octa-core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="./images/display2.jpg">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Mini-Drop Fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="./images/battery2.jpg">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>5000mAh, 720hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="controls">
+             <img src="images/uparrow.jpg" id="upbtn">
+             <h3>Features</h3>
+             <img src="./images/downarrow.jpg" id="downbtn">
+         </div>
+
+
+        </div>
+        
+        <script>
+            var circle=document.getElementById("circle");
+            var upbtn=document.getElementById("upbtn");
+            var downbtn=document.getElementById("downbtn");
+
+            var rotateValue=circle.style.transform;
+            var rotateSum;
+
+            upbtn.onclick = function()
+            {
+                rotateSum=rotateValue + "rotate(-90deg)";
+                circle.style.transform=rotateSum;
+                rotateValue = rotateSum;
+            }
+
+            downbtn.onclick = function()
+            {
+                rotateSum=rotateValue + "rotate(90deg)";
+                circle.style.transform=rotateSum;
+                rotateValue = rotateSum;
+            }
+
+        </script>
+
+    </body>
+</html>
